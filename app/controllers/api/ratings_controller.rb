@@ -3,7 +3,7 @@ module Api
     # GET /api/v1/ratings
     def index
       q = Api::Ratings::Query.new(ratings, params.to_unsafe_hash)
-      binding.pry
+
       respond_with q.results
     end
 

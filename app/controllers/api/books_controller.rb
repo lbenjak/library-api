@@ -45,7 +45,7 @@ module Api
     def book_params
       params.from_jsonapi
             .require(:book)
-            .permit(:title, :number_of_copies, :author_id, :isbn, :pages, :published_at, :genres)
+            .permit(:title, :number_of_copies, :author_id, :isbn, :pages, :published_at, genre_ids: [], rating_ids: [])
     end
 
     def find_book
