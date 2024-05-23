@@ -7,17 +7,11 @@ class Book < ApplicationRecord
   validates :title, presence: true
   validates :number_of_copies, presence: true
   validates :isbn, presence: true, uniqueness: true
-  validates :pages, presence: true
+  validates :pages, presence: true, numericality: { only_integer: true }
   validates :published_at, presence: true
 
   def average_rating
     ratings.average(:score)
-  end
-
-  def validate_isbn
-    if isbn.length != 13
-      errors.add(:isbn, 'must be 13 characters long')
-    end
   end
 
   def full_title

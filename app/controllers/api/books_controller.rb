@@ -31,7 +31,6 @@ module Api
     # DELETE /api/v1/books/:id
     def destroy
       book = find_book
-      binding.pry
 
       book.destroy
       respond_with book
