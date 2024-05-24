@@ -11,6 +11,7 @@ gem 'pry-byebug'
 gem 'pry-rails'
 gem 'pundit'
 gem "rails", "~> 7.1.2"
+gem 'rack-cors'
 
 gem "sqlite3", "~> 1.4"
 
