@@ -6,6 +6,7 @@ module Api
       set_type :author
       attribute :first_name
       attribute :last_name
+      attribute :biography
     end
   end
 end
